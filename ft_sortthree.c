@@ -6,7 +6,7 @@
 /*   By: bpoetess <bpoetess@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:18:23 by bpoetess          #+#    #+#             */
-/*   Updated: 2022/02/15 16:18:42 by bpoetess         ###   ########.fr       */
+/*   Updated: 2022/02/23 01:00:12 by mikhail          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ void	ft_sortathree(t_env *env)
 	if (env->a->next->next->next || ft_isstacksorted(env->a))
 		return ;
 	ft_givemeanums(arr, env);
-	if (arr[0] < arr[1] & arr[1] > arr[2] & arr[0] < arr[2])
+	if (arr[0] < arr[1] && arr[1] > arr[2] && arr[0] < arr[2])
 	{
 		ft_rra(env);
 		ft_sa(env);
 	}
-	else if (arr[0] > arr[1] & arr[1] < arr[2] & arr[0] < arr[2])
+	else if (arr[0] > arr[1] && arr[1] < arr[2] && arr[0] < arr[2])
 		ft_sa(env);
-	else if (arr[0] < arr[1] & arr[1] > arr[2] & arr[0] > arr[2])
+	else if (arr[0] < arr[1] && arr[1] > arr[2] && arr[0] > arr[2])
 		ft_rra(env);
-	else if (arr[0] > arr[1] & arr[1] < arr[2] & arr[0] > arr[2])
+	else if (arr[0] > arr[1] && arr[1] < arr[2] && arr[0] > arr[2])
 		ft_ra(env);
-	else if (arr[0] > arr[1] & arr[1] > arr[2] & arr[0] > arr[2])
+	else if (arr[0] > arr[1] && arr[1] > arr[2] && arr[0] > arr[2])
 	{
 		ft_sa(env);
 		ft_rra(env);
@@ -69,18 +69,18 @@ void	ft_sortbthree(t_env *env)
 	if (env->b->next->next->next || ft_isstackrevsorted(env->b))
 		return ;
 	ft_givemebnums(arr, env);
-	if (arr[0] < arr[1] & arr[1] < arr[2] & arr[0] < arr[2])
+	if (arr[0] < arr[1] && arr[1] < arr[2] && arr[0] < arr[2])
 	{
 		ft_rb(env);
 		ft_sb(env);
 	}
-	else if (arr[0] < arr[1] & arr[1] > arr[2] & arr[0] < arr[2])
+	else if (arr[0] < arr[1] && arr[1] > arr[2] && arr[0] < arr[2])
 		ft_rb(env);
-	else if (arr[0] > arr[1] & arr[1] < arr[2] & arr[0] < arr[2])
+	else if (arr[0] > arr[1] && arr[1] < arr[2] && arr[0] < arr[2])
 		ft_rrb(env);
-	else if (arr[0] < arr[1] & arr[1] > arr[2] & arr[0] > arr[2])
+	else if (arr[0] < arr[1] && arr[1] > arr[2] && arr[0] > arr[2])
 		ft_sb(env);
-	else if (arr[0] > arr[1] & arr[1] < arr[2] & arr[0] > arr[2])
+	else if (arr[0] > arr[1] && arr[1] < arr[2] && arr[0] > arr[2])
 	{
 		ft_rrb(env);
 		ft_sb(env);
