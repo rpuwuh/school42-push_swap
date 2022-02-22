@@ -6,11 +6,30 @@
 /*   By: bpoetess <bpoetess@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 20:35:57 by bpoetess          #+#    #+#             */
-/*   Updated: 2022/02/22 22:15:18 by bpoetess         ###   ########.fr       */
+/*   Updated: 2022/02/22 23:13:09 by bpoetess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./checker.h"
+
+static int	ft_isstringaninstruction(char *s)
+{
+	if (!s)
+		return (0);
+	if (!ft_strncmp(s, "sa\n", ft_strlen(s))
+		|| !ft_strncmp(s, "sb\n", ft_strlen(s))
+		|| !ft_strncmp(s, "ss\n", ft_strlen(s))
+		|| !ft_strncmp(s, "pa\n", ft_strlen(s))
+		|| !ft_strncmp(s, "pb\n", ft_strlen(s))
+		|| !ft_strncmp(s, "ra\n", ft_strlen(s))
+		|| !ft_strncmp(s, "rb\n", ft_strlen(s))
+		|| !ft_strncmp(s, "rr\n", ft_strlen(s))
+		|| !ft_strncmp(s, "rra\n", ft_strlen(s))
+		|| !ft_strncmp(s, "rrb\n", ft_strlen(s))
+		|| !ft_strncmp(s, "rrr\n", ft_strlen(s)))
+		return (1);
+	return (0);
+}
 
 static char	*ft_readactions(void)
 {
@@ -24,6 +43,8 @@ static char	*ft_readactions(void)
 		s1 = get_next_line(0);
 		if (!s1)
 			break ;
+		if (!ft_isstringaninstruction(s1))
+			ft_error ();
 		s2 = ft_stradd(&s2, s1);
 		if (s1)
 			free (s1);
