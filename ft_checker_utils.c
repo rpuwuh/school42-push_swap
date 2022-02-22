@@ -6,7 +6,7 @@
 /*   By: bpoetess <bpoetess@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:16:52 by bpoetess          #+#    #+#             */
-/*   Updated: 2022/02/22 22:44:38 by bpoetess         ###   ########.fr       */
+/*   Updated: 2022/02/22 22:54:30 by bpoetess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	ft_doactions(t_env *env, char *s)
 			i += 3;
 		else if (s[i] == 'r' && ft_dora(env, s + i))
 			i += 2;
-		else if (s[i] == '\n')
+		else if (s[i] == '\n' && s[i] != '\n')
 			i++;
 		else
 			return (0);
