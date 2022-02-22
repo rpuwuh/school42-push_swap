@@ -6,7 +6,7 @@
 /*   By: bpoetess <bpoetess@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 21:16:52 by bpoetess          #+#    #+#             */
-/*   Updated: 2022/02/22 21:47:52 by bpoetess         ###   ########.fr       */
+/*   Updated: 2022/02/22 22:44:38 by bpoetess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	ft_dosa(t_env *env, char *s)
 	else if (s[1] == 'b')
 		ft_sb(env);
 	else if (s[1] == 's')
-		ft_ss(env);
+	{
+		ft_sa(env);
+		ft_sb(env);
+	}
 	else
 		return (0);
 	return (1);
@@ -44,7 +47,10 @@ int	ft_dorra(t_env *env, char *s)
 	else if (s[2] == 'b')
 		ft_rrb(env);
 	else if (s[2] == 'r')
-		ft_rrr(env);
+	{
+		ft_rra(env);
+		ft_rrb(env);
+	}
 	else
 		return (0);
 	return (1);
@@ -57,7 +63,10 @@ int	ft_dora(t_env *env, char *s)
 	else if (s[1] == 'b')
 		ft_rb(env);
 	else if (s[1] == 'r')
-		ft_rr(env);
+	{
+		ft_ra(env);
+		ft_rb(env);
+	}
 	else
 		return (0);
 	return (1);

@@ -30,7 +30,7 @@ CFLAGS = -Wall -Werror -Wextra
 $(NAME): $(OBJDIR) $(LIBFT) $(OBJDIR)$(NAME).o $(SRC_O) $(HEADER) Makefile
 	$(CC) $(CFLAGS) $(LIBFT) $(OBJDIR)$(NAME).o $(SRC_O)  -o $(NAME)
 
-$(NAME_CHECKER): $(OBJDIR) $(LIBFT) $(GNL) $(SRC_O) $(SRC_BO) $(OBJDIR)$(NAME_CHECKER).o $(HEADER) Makefile
+$(NAME_CHECKER): $(OBJDIR) $(LIBFT) $(GNL) $(OBJDIR)$(NAME_CHECKER).o $(SRC_O) $(SRC_BO) $(HEADER) Makefile
 	$(CC) $(CFLAGS) $(LIBFT) $(GNL) $(SRC_O) $(SRC_BO) $(OBJDIR)$(NAME_CHECKER).o -o $(NAME_CHECKER)
 
 $(OBJDIR):
