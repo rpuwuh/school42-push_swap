@@ -23,7 +23,7 @@ LIBFT = $(addprefix $(OBJDIR),libft.a)
 
 GNL = $(addprefix $(OBJDIR),get_next_line.a)
 
-CC = cc
+CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -67,4 +67,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re exec
+gimme: 
+	echo "$(OBJDIR) $(LIBFT) $(OBJDIR)$(NAME).o $(SRC_O) $(HEADER) Makefile"
+
+.PHONY: all clean fclean re exec gimme

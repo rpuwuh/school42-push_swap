@@ -6,7 +6,7 @@
 /*   By: bpoetess <bpoetess@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 15:59:40 by bpoetess          #+#    #+#             */
-/*   Updated: 2022/02/23 18:59:03 by bpoetess         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:56:06 by bpoetess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ static int	ft_isatoierror(int n, char *s)
 	}
 	while (s[i] == '0')
 		i++;
-	if ((!s[i] && s[i - 1] == '0')
-		|| (s[i] == '1' && sign == -1 && s[i + 1] == 0))
+	if ((s[i] == 0) || (s[i] == '1' && sign == -1 && s[i + 1] == 0))
 		return (0);
 	else
 		return (1);
